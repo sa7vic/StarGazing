@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hohmann Transfer to Mars</title>
+  <style>
+    body { margin:0; background:#111; color:#eee; font-family:sans-serif; text-align:center; }
+    canvas { display:block; margin:auto; }
+    #controls { margin: 10px; }
+  </style>
+</head>
+<body>
+  <h2>🚀 Hohmann Transfer: Earth to Mars</h2>
+  <p>Adjust burn impulse &amp; timing → Press START → See if you reach Mars orbit!</p>
+  
+  <div id="controls">
+    Burn Velocity (km/s): <input type="range" id="burnSlider" min="1" max="20" step="0.1" value="11"> 
+    <span id="burnVal">11</span> <br>
+    Launch Angle (degrees): <input type="range" id="angleSlider" min="0" max="360" step="1" value="0"> 
+    <span id="angleVal">0</span> <br>
+    <button onclick="startTransfer()">START</button>
+    <button onclick="resetSim()">RESET</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
